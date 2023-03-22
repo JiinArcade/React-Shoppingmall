@@ -4,7 +4,7 @@ import { faMagnifyingGlass, faBagShopping } from '@fortawesome/free-solid-svg-ic
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 const Nav = () => {
-  const loginList = ['매장찾기', '고객센터', '가입하기', '로그인'];
+  const loginList = ['매장 찾기', '고객센터', '가입하기', '로그인'];
   const menuList = ['New Releases', 'Men', 'Women', 'Kids', 'Sale', 'SNKRS', '나이키 앱']
 
   return (
@@ -24,7 +24,7 @@ const Nav = () => {
       </div>
 
       <div className='nav'>
-        <img width={80} src="/images/nikelogo.png" alt="" />
+        <img width={70} src="/images/nikelogo.png" alt="" />
         <ul className='gnb-list'>
           {
             menuList.map((menu, i) => {
@@ -38,8 +38,10 @@ const Nav = () => {
             <FontAwesomeIcon className='ic-search' icon={faMagnifyingGlass} />
             <input type="text" placeholder='검색' />
           </div>
-          <div>
+          <div className='icon-1'>
             <FontAwesomeIcon className='icon' icon={faHeart} />
+          </div>
+          <div className='icon-2'>
             <FontAwesomeIcon className='icon' icon={faBagShopping} />
           </div>
         </div>

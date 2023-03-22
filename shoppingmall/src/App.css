@@ -8,6 +8,17 @@ li {
   list-style: none;
 }
 
+.login-img img,
+.login-list li,
+.nav img,
+.gnb-list li,
+.ic-search,
+.icon-1,
+.icon-2 {
+  cursor: pointer;
+}
+
+
 .login {
   width: 100%;
   justify-content: space-between;
@@ -17,7 +28,7 @@ li {
 }
 
 .login-img img {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .login-img img:first-child {
@@ -28,26 +39,27 @@ li {
   opacity: .5;
 }
 
-.login-list li {
+.login-item {
   display: flex;
   font-size: 12px;
   font-weight: 700;
   color: #000;
 }
 
-.login-list li:hover {
+.login-item:hover {
   color: #818181;
 }
 
-.login-list li::after {
+.login-item::after {
   content: '';
   width: 1px;
   height: 13px;
   background-color: #000;
   margin-left: 15px;
+  margin-top: 2px;
 }
 
-.login-list li:last-child::after {
+.login-item:last-child::after {
   content: none;
 }
 
@@ -72,22 +84,23 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 150px;
 }
 
-.gnb-list li {
+.gnb-item {
   margin-right: 8px;
   font-weight: 500;
-  padding: 15px 15px;
+  padding: 15px 7px;
   text-align: center;
   border-bottom: 2px solid transparent;
   transition: border-color 300ms ease-in-out;
 }
 
-.gnb-list li:hover {
+.gnb-item:hover {
   border-color: black;
 }
 
-.gnb-list li:last-child {
+.gnb-item:last-child {
   margin-right: 0;
 }
 
@@ -100,7 +113,6 @@ li {
 
 .search-box {
   position: relative;
-  margin-right: 30px;
 }
 
 .ic-search {
@@ -124,7 +136,7 @@ li {
 }
 
 .search-box input::placeholder {
-  color: #b9b9b9;
+  color: #b3b2b2;
   position: absolute;
   top: 11px;
   left: 50px;
@@ -132,13 +144,41 @@ li {
   font-size: 15px;
 }
 
-.icon:first-child {
-  margin-right: 30px;
-}
-
-.icon:hover {
-  background-color: #dadada;
+.icon-1,
+.icon-2 {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  background-color: none;
 }
 
+.icon-1:hover,
+.icon-2:hover {
+  background-color: #eee;
+}
 
+.icon-1 {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.product div,
+.title p  {
+  margin-bottom: 5px;
+}
+
+.product div:nth-child(4) {
+  margin-bottom: 15px;
+}
+
+.content,
+.new {
+  margin-top: 5px;
+  color: rgb(185, 55, 32);
+}
+
+.title p:last-child {
+  color: #747474;
+}
