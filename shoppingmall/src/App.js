@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ProductAll from './page/ProductAll';
 import ProductDetail from './page/ProductDetail';
 import Login from './page/Login';
+import Nav from './component/Nav';
 
 // 1. 전체상품(ProductAll), 로그인, 상세페이지(ProductDetail)
 // 2. 로그인 전에 상세페이지 접속시, 로그인 페이지를 먼저 보여준다.
@@ -13,6 +14,7 @@ import Login from './page/Login';
 function App() {
   return (
     <div className="App">
+      <Nav></Nav>
       <Routes>
         {/* 첫화면 */}
         <Route path='/' element={<ProductAll></ProductAll>}></Route>
