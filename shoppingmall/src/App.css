@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.login {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  background-color: #eee;
+  padding: 10px 50px;
+}
+
+.login-img img {
+  margin-left: 20px;
+}
+
+.login-img img:first-child {
+  margin-left: 0;
+}
+
+.login-img img:hover {
+  opacity: .5;
+}
+
+.login-list li {
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+
+.login-list li:hover {
+  color: #818181;
+}
+
+.login-list li::after {
+  content: '';
+  width: 1px;
+  height: 13px;
+  background-color: #000;
+  margin-left: 15px;
+}
+
+.login-list li:last-child::after {
+  content: none;
+}
+
+.login-list {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.nav img:hover {
+  opacity: .5;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gnb-list li {
+  margin-right: 8px;
+  font-weight: 500;
+  padding: 15px 15px;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: border-color 300ms ease-in-out;
+}
+
+.gnb-list li:hover {
+  border-color: black;
+}
+
+.gnb-list li:last-child {
+  margin-right: 0;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+
+.search-box {
+  position: relative;
+  margin-right: 30px;
+}
+
+.ic-search {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+}
+
+.search-box input {
+  width: 180px;
+  height: 42px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  padding: 0 50px;
+}
+
+.search-box input:hover {
+  background-color: #dbdbdb;
+}
+
+.search-box input::placeholder {
+  color: #b9b9b9;
+  position: absolute;
+  top: 11px;
+  left: 50px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.icon:first-child {
+  margin-right: 30px;
+}
+
+.icon:hover {
+  background-color: #dadada;
+  border-radius: 50%;
+}
+
+
