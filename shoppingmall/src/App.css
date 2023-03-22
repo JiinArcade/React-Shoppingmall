@@ -70,6 +70,10 @@ li {
   align-items: center;
 }
 
+/* ******************************************************** */
+/* Nav.jsx --------------nav */
+/* ******************************************************** */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -164,12 +168,91 @@ li {
   margin-left: 20px;
 }
 
+/* ******************************************************** */
+/* Nav.jsx --------------banner */
+/* ******************************************************** */
+.banner-container {
+  overflow: hidden;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #eee;
+  border-bottom: 1px solid #dadada;
+  transition: transform 0.5s;
+}
+
+.banner-list {
+  display: flex;
+  width: 200vw;
+} 
+
+.banner-item {
+  width: 100vw;
+  transform: all 300ms translateX(-100vw);
+}
+
+.banner-item span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.banner-link p {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.banner-link p a {
+  color: #000;
+}
+
+
+/* ******************************************************** */
+/* Nav.jsx --------------speacial-container */
+/* ******************************************************** */
+
+.speacial-container,
+.running-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.speacial-container .text h1,
+.speacial-container .text p {
+  margin-bottom: 15px;
+}
+
+.App-box h3 {
+  margin-bottom: 30px;
+}
+
+.App-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.App-box button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+/* ******************************************************** */
+/* ProductCard.jsx */
+/* ******************************************************** */
+.product {
+  display: inline-block;
+  padding: 10px;
+}
+
 .product div,
 .title p  {
   margin-bottom: 5px;
 }
 
-.product div:nth-child(4) {
+.product div:nth-child(3) {
   margin-bottom: 15px;
 }
 
