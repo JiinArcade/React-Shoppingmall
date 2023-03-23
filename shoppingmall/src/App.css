@@ -77,7 +77,8 @@ li {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  align-items: center;
+  margin: 20px 40px;
 }
 
 .nav img:hover {
@@ -86,14 +87,13 @@ li {
 
 .gnb-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 600px;
   margin-left: 150px;
+  font-weight: 500;
 }
 
 .gnb-item {
-  margin-right: 8px;
-  font-weight: 500;
   padding: 15px 7px;
   text-align: center;
   border-bottom: 2px solid transparent;
@@ -242,9 +242,8 @@ li {
 /* ******************************************************** */
 /* ProductCard.jsx */
 /* ******************************************************** */
-.product {
-  display: inline-block;
-  padding: 10px;
+.product img {
+  width: 100%;
 }
 
 .product div,
@@ -256,9 +255,8 @@ li {
   margin-bottom: 15px;
 }
 
-.content,
-.new {
-  margin-top: 5px;
+.product-list {
+  margin-top: 10px;
   color: rgb(185, 55, 32);
 }
 

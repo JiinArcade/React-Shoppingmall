@@ -24,7 +24,7 @@ const Nav = () => {
       </div>
 
       <div className='nav'>
-        <img width={70} src="/images/nikelogo.png" alt="" />
+        <img width={80} src="/images/nikelogo.png" alt="" />
         <ul className='gnb-list'>
           {
             menuList.map((menu, i) => {
@@ -69,10 +69,6 @@ const Nav = () => {
         </ul>
       </div>
 
-      <div>
-        <iframe src="" frameborder="0"></iframe>
-      </div>
-
       <div className="speacial-container">
         <div className='text'>
           <h1>너만을 위한 특별한 나이키</h1>
@@ -103,7 +99,6 @@ const Nav = () => {
           <button><a href="/">구매하기</a></button>
         </div>
       </div>
-
     </div>
   )
 }
