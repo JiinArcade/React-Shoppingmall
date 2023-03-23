@@ -55,8 +55,8 @@ li {
   width: 1px;
   height: 13px;
   background-color: #000;
-  margin-left: 15px;
-  margin-top: 2px;
+  margin-left: 11px;
+  margin-top: 3px;
 }
 
 .login-item:last-child::after {

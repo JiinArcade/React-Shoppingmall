@@ -41,7 +41,7 @@ const ProductAll = () => {
     <Container>
       <Row>
         {
-          productsList.map((menu, i) => {
+          productsList.map((menu) => {
             return (
               <Col lg={4}>
                 <ProductCard menu={menu}></ProductCard>

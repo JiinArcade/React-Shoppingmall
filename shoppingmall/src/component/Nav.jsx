@@ -2,10 +2,18 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 const Nav = () => {
   const loginList = ['매장 찾기', '고객센터', '가입하기', '로그인'];
   const menuList = ['New Releases', 'Men', 'Women', 'Kids', 'Sale', 'SNKRS', '나이키 앱']
+
+  // loginList 배열의 마지막 요소인 '로그인'에게 onclick을 부여하려면?
+
+  const navigate = useNavigate()
+  const goToLogin = () => {
+    navigate('/login')
+  }
 
   return (
     <div>
@@ -17,7 +25,11 @@ const Nav = () => {
         <ul className='login-list'>
           {
             loginList.map((item, i) => {
-              return <li className='login-item' key={i}>{item}</li>
+              if (i === loginList.length - 1) {
+                return <li className='login-item' key={i} onClick={goToLogin}>{item}</li>
+              } else {
+                return <li className='login-item' key={i}>{item}</li>
+              }
             })
           }
         </ul>
