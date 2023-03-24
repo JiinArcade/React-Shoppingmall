@@ -2,10 +2,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
-// import ProductAll from './page/ProductAll';
+import { useState } from 'react';
 import ProductDetail from './page/ProductDetail';
 import Login from './page/Login';
-import Nav from './component/Nav';
+import Nav from './component/Nav'
+
 
 
 // 1. 전체상품(ProductAll), 로그인, 상세페이지(ProductDetail)
@@ -14,6 +15,10 @@ import Nav from './component/Nav';
 // 4. 로그인 하면 로그아웃 버튼이 보이고, 로그아웃 하면 로그인 버튼이 보인다.
 
 function App() {
+  // true면 로그인이 된 상태, false면 로그인이 안 된 상태
+  // 사이트 접속 했을 때 처음 로그인된 상태면 안되니까 먼저 기본값으로 false 주고
+  // 로그인버튼을 클릭 했을 때 상태 값을 true로 바꿔줌 
+  const [userLogin, setUserLogin] = useState(false)
   return (
     <div className="App">
       <Routes>

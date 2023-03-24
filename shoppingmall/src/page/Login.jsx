@@ -1,85 +1,48 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Form } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+
+const Login = ({ setUserLogin }) => {
+  // 로그인시 다시 전체페이지로 돌아가기 위한 코드
+  const navigate = useNavigate()
+
+  const loginUser = (e) => {
+    // 콘솔이 잠깐 찍혔다가 빠르게 사라지는 이유 
+    // : 페이지를 새로고침 하기 때문에 그렇다.
+    // 해결 방법 : form이 매번 새로고침 하는걸 막아준다.
+
+    // Form 사용시 주의점!
+    // form을 사용할 때는 form 계속 새로고침 하는걸 막아줘야 하니까
+    // preventDefault()를 사용하자!
+    console.log("loginUser")
+    e.preventDefault();
+
+    setUserLogin(true);
+    navigate('/')
+  }
+
   return (
-    <div className='login-wrapper'>
-      <div className="login-box">
-        <div className='logo-header'>
-          <img width={60} src="/images/nikelogo.png" alt="" />
+    <Container style={{ width: "480px", marginTop: "20px" }}>
+      {/* form 자체에서 주는 evnet를 파라미터 값으로 받아온다. */}
+      {/* onSubmit : type이 submit일 경우 onClick이 아니라 onSubmit을 사용! */}
+      {/* form 자체에서 주는 이벤트를 파라미터 값으로 보내줌 */}
+      <Form onSubmit={(e) => loginUser(e)}>
+        <img style={{ width: "50px", margin: "20px 0" }} src="https://pngimg.com/d/nike_PNG11.png" alt="logo" />
+        <h3>가입 또는 로그인을 위해 이메일을 입력하세요.</h3>
+        <div>
+          <span>대한민국</span>
+          <span style={{ color: "gray", marginLeft: "10px", textDecoration: "underline", cursor: "pointer" }}>변경</span>
         </div>
-        <h1>가입 또는 로그인을 위해 이메일을 입력하세요.</h1>
-        <div className='country-wrapper'>
-          <span className='selected-country-label'>튀니지</span>
-          <div>
-            <label className='country' htmlFor="">변경</label>
-            <select name="country" id="country" autoComplete='off' className='country-choice'>
-              <option value="">가나</option>
-              <option value="">가봉</option>
-              <option value="">가이아나</option>
-              <option value="">감비아</option>
-              <option value="">과들루프</option>
-              <option value="">과테말라</option>
-              <option value="">괌</option>
-              <option value="">그레나다</option>
-              <option value="">그리스</option>
-              <option value="">그린란드</option>
-              <option value="">기니</option>
-              <option value="">기니비사우</option>
-              <option value="">나미비아</option>
-              <option value="">나우루</option>
-              <option value="">나이지리아</option>
-              <option value="">남극 대륙</option>
-              <option value="">남수단</option>
-              <option value="">남아프리카 공화국</option>
-              <option value="">네덜란드</option>
-              <option value="">네덜란드령 안틸레스</option>
-              <option value="">네팔</option>
-              <option value="">노르웨이</option>
-              <option value="">노퍽 섬</option>
-              <option value="">뉴질랜드</option>
-              <option value="">뉴칼레도니아</option>
-              <option value="">니우에</option>
-              <option value="">니제르</option>
-              <option value="">니카라과</option>
-              <option value="">대만</option>
-              <option value="">대한민국</option>
-              <option value="">덴마크</option>
-              <option value="">도미니카</option>
-              <option value="">도미니카 공화국</option>
-              <option value="">독일</option>
-              <option value="">동티모르</option>
-              <option value="">라오스</option>
-              <option value="">라이베리아</option>
-              <option value="">라트비아</option>
-              <option value="">라틴 아메리카</option>
-              <option value="">러시아 연합</option>
-              <option value="">레바논</option>
-              <option value="">레위니옹</option>
-            </select>
-          </div>
+        <input style={{ width: "100%", margin: "30px 0", padding: "12px", borderRadius: "5px", outline: "none", border: "1px solid #000" }} type="text" placeholder='이메일' />
+        <p style={{ width: "380px", color: "gray" }}>계속 진행하면 나이키의 <span style={{ textDecoration: "underline" }}>개인 정보 처리 방침</span> 및 <span style={{ textDecoration: "underline" }}>이용약관</span>에 동의하게 됩니다.</p>
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <button type='submit' style={{ width: "80px", backgroundColor: "#000", color: "#fff", border: "none" ,borderRadius: "40px", padding: "10px" }}>계속</button>
         </div>
-        <div className='input-container error'>
-          <input type="text" className='username input-text-field' />
-          <span className='email-box'></span>
-          <label>
-            <span className='email'>이메일</span>
-          </label>
-          <fieldset>
-            <legend>이메일</legend>
-          </fieldset>
-        </div>
-        <div className='must-box'>
-          <span>필수</span>
-        </div>
-        <div className='agree-box'>
-          <p>계속 진행하면 나이키의 <a href="/">개인 정보 처리 방침</a> 및 <a href="">이용약관</a>에 동의하게 됩니다.</p>
-        </div>
-        <div className='next-box'>
-          <button>계속</button>
-        </div>
-      </div>
-    </div>
+      </Form>
+    </Container>
   )
 }
 
-export default Login
+export default Login;
