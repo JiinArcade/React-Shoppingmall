@@ -3,9 +3,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import ProductDetail from './page/ProductDetail';
+import Index from './component/Index';
+import PrivateRoute from './route/PrivateRoute';
 import Login from './page/Login';
-import Nav from './component/Nav'
+
 
 
 
@@ -32,11 +33,11 @@ function App() {
     <div className="App">
       <Routes>
         {/* 첫화면 */}
-        <Route path='/' element={<Nav></Nav>}></Route>
+        <Route path='/' element={<Index></Index>}></Route>
         {/* 로그인했을 떄 보여줄 */}
         <Route path='/login' element={<Login setUserLogin={setUserLogin} ></Login>}></Route>
         {/* 상품을 눌렀을때 보여줄 것 일일히 path 걸어줄 수 없으니 id값으로 넣어줌 */}
-        <Route path='/product/:id' element={<ProductDetail></ProductDetail>}></Route>
+        <Route path='/product/:id' element={<PrivateRoute userLogin={userLogin}></PrivateRoute>}></Route>
       </Routes>
     </div>
   );

@@ -18,13 +18,12 @@ li {
   cursor: pointer;
 }
 
-
 .login {
   width: 100%;
   justify-content: space-between;
   display: flex;
   background-color: #eee;
-  padding: 10px 50px;
+  padding: 5px 50px;
 }
 
 .login-img img {
@@ -37,6 +36,10 @@ li {
 
 .login-img img:hover {
   opacity: .5;
+}
+
+.login-list {
+  margin-bottom: 0;
 }
 
 .login-item {
@@ -73,12 +76,15 @@ li {
 /* ******************************************************** */
 /* Nav.jsx --------------nav */
 /* ******************************************************** */
-
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 40px;
+  padding: 2px 50px;
+}
+
+.nav img {
+  margin-left: 50px;
 }
 
 .nav img:hover {
@@ -91,10 +97,13 @@ li {
   width: 600px;
   margin-left: 150px;
   font-weight: 500;
+  margin-left: 200px;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .gnb-item {
-  padding: 15px 7px;
+  padding: 18px 7px;
   text-align: center;
   border-bottom: 2px solid transparent;
   transition: border-color 300ms ease-in-out;
@@ -173,7 +182,6 @@ li {
 /* ******************************************************** */
 .banner-container {
   overflow: hidden;
-  padding: 10px 0;
   text-align: center;
   background-color: #eee;
   border-bottom: 1px solid #dadada;
@@ -182,11 +190,11 @@ li {
 
 .banner-list {
   display: flex;
-  width: 200vw;
+  align-items: center;
+  text-align: center;
 } 
 
 .banner-item {
-  width: 100vw;
   transform: all 300ms translateX(-100vw);
 }
 
@@ -198,17 +206,16 @@ li {
 .banner-link p {
   font-size: 11px;
   margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .banner-link p a {
   color: #000;
 }
 
-
 /* ******************************************************** */
 /* Nav.jsx --------------speacial-container */
 /* ******************************************************** */
-
 .speacial-container,
 .running-container {
   text-align: center;
@@ -238,10 +245,13 @@ li {
   font-size: 15px;
 }
 
-
 /* ******************************************************** */
 /* ProductCard.jsx */
 /* ******************************************************** */
+.product {
+  margin-bottom: 30px;
+}
+
 .product img {
   width: 100%;
 }
@@ -264,6 +274,7 @@ li {
   color: #747474;
 }
 
+
 /* ******************************************************** */
 /* Login.jsx */
 /* ******************************************************** */
@@ -274,3 +285,51 @@ button:hover {
 p > span {
   cursor: pointer;
 }
+
+/* ******************************************************** */
+/* ProductDetail.jsx */
+/* ******************************************************** */
+.shooseDetailBox {
+  width: 400px;
+  height: 500px;
+}
+
+.DetailHeader {
+  width: 100%;
+}
+
+.DetailHeader h2 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.DetailHeader h4 {
+  font-size: 20px;
+}
+
+.DetailHeader h5 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.DetailHeader p {
+  padding: 10px 0 50px 0;
+  font-weight: 600;
+}
+
+.ChoiceGuideBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.ChoiceGuideBox span:first-child {
+  font-weight: bold;
+}
+
+.ChoiceGuideBox span:last-child {
+  font-weight: bold;
+  color: gray;
+}
+
