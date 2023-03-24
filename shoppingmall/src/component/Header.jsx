@@ -15,6 +15,12 @@ const Header = () => {
     navigate('/login')
   }
 
+  // onKeyPress 유저가 키를 눌렀을 때 발생한다.
+  // alt, ctrl, shift, ESC 키에는 onKeyPress가 먹지 않는다.
+  const search = () => {
+    console.log('lalala')
+  }
+
   return (
     <div>
       <div className='login'>
@@ -50,7 +56,7 @@ const Header = () => {
         <div className='icon-list'>
           <div className='search-box'>
             <FontAwesomeIcon className='ic-search' icon={faMagnifyingGlass} />
-            <input type="text" placeholder='검색' />
+            <input type="text" placeholder='검색' onKeyPress={search}/>
           </div>
           <div className='icon-1'>
             <FontAwesomeIcon className='icon' icon={faHeart} />

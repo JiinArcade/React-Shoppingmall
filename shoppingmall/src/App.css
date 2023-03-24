@@ -8,6 +8,11 @@ li {
   list-style: none;
 }
 
+
+/* ******************************************************** */
+/* Header.jsx --------------nav */
+/* ******************************************************** */
+
 .login-img img,
 .login-list li,
 .nav img,
@@ -74,13 +79,16 @@ li {
 }
 
 /* ******************************************************** */
-/* Nav.jsx --------------nav */
+/* Header.jsx --------------nav */
 /* ******************************************************** */
 .nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
   align-items: center;
   padding: 2px 50px;
+  position: fixed;
 }
 
 .nav img {
@@ -178,20 +186,27 @@ li {
 }
 
 /* ******************************************************** */
-/* Nav.jsx --------------banner */
+/* Main.jsx --------------banner */
 /* ******************************************************** */
+.emptyBox {
+  width: 100%;
+  height: 66px;
+}
+
 .banner-container {
-  overflow: hidden;
-  text-align: center;
   background-color: #eee;
   border-bottom: 1px solid #dadada;
   transition: transform 0.5s;
+  padding: 5px;
 }
 
 .banner-list {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 0;
+  padding-left: 0;
 } 
 
 .banner-item {
@@ -205,7 +220,7 @@ li {
 
 .banner-link p {
   font-size: 11px;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
@@ -213,37 +228,89 @@ li {
   color: #000;
 }
 
+.banner-move {
+  display: none;
+}
+
 /* ******************************************************** */
-/* Nav.jsx --------------speacial-container */
+/* Main.jsx --------------vedioClip */
 /* ******************************************************** */
-.speacial-container,
-.running-container {
+
+.vedioClip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
-.speacial-container .text h1,
-.speacial-container .text p {
-  margin-bottom: 15px;
+.mainTitle {
+  font-weight: bold;
+  font-size: 50px;
+  padding: 40px 0 10px 0;
 }
 
-.App-box h3 {
-  margin-bottom: 30px;
+.mainTitle p {
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
-.App-box button {
-  padding: 10px 20px;
+.appDownload {
+  font-weight: bold;
+  font-size: 20px;
+  color: #444444;
+  margin-bottom: 40px;
+}
+
+.buyBtn,
+.detailBtn {
   border: none;
+  border-radius: 30px;
   background-color: #000;
-  border-radius: 20px;
+  padding: 5px 15px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
 }
 
-.App-box button a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 15px;
+.btnBox button:first-child {
+  margin-right: 30px;
 }
+
+/* ******************************************************** */
+/* Main.jsx --------------TrendingNow */
+/* ******************************************************** */
+
+.TrendingNow {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.sampleBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TrendingNow h1 {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.sample {
+  width: 49%;
+  height: 800px;
+}
+
+.sample img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
 
 /* ******************************************************** */
 /* ProductCard.jsx */
