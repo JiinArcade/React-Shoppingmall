@@ -1,10 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { faMagnifyingGlass, faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { useNavigate } from 'react-router-dom'
 import Main from './Main'
 import ProductAll from '../page/ProductAll'
+import { Container } from 'react-bootstrap';
 
 const Nav = () => {
   const loginList = ['매장 찾기', '고객센터', '가입하기', '로그인'];
